@@ -1,0 +1,13 @@
+/* Input name */
+
+.forgot-password .form-group .input-name {
+    font-size: 14px;
+}
+
+
+/* Button Submit */
+
+.forgot-password .btn-submit {
+    background-color: tomato;
+    padding: 12px;
+}

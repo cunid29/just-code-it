@@ -1,0 +1,37 @@
+.btn-top-page button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+}
+
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+    .footer-main {
+        width: 500px;
+    }
+}
+
+
+/* Device horizontal rotation */
+
+@media (min-width: 768px) and (max-width: 992px) {}
+
+
+/* Tablet */
+
+@media (min-width: 576px) and (max-width: 768px) {}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {}
+
+
+/* Social icon */
+
+.social-icon {
+    font-size: 25px;
+}
