@@ -9,6 +9,7 @@ import { UserManagerComponent } from './dashboard/user-manager/user-manager.comp
 import { AccountComponent } from './web-view/account/account.component';
 import { ForgotPassComponent } from './web-view/account/forgot-pass/forgot-pass.component';
 import { LoginRegisterComponent } from './web-view/account/login-register/login-register.component';
+import { BlogComponent } from './web-view/blog/blog.component';
 import { ContactComponent } from './web-view/contact/contact.component';
 import { HomeComponent } from './web-view/home/home.component';
 import { Page404Component } from './web-view/page404/page404.component';
@@ -80,6 +81,10 @@ const routes: Routes = [
             component:ForgotPassComponent
           }
         ]
+      },
+      {
+        path:'blog',
+        component:BlogComponent
       },
       {
         path:'contact',

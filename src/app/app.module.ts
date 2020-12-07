@@ -32,6 +32,8 @@ import { LoginRegisterComponent } from './web-view/account/login-register/login-
 import { ForgotPassComponent } from './web-view/account/forgot-pass/forgot-pass.component';
 import { AccountComponent } from './web-view/account/account.component';
 import { ContactComponent } from './web-view/contact/contact.component';
+import { BlogComponent } from './web-view/blog/blog.component';
+import { OrderComponent } from './web-view/order/order.component';
 
 
 @NgModule({
@@ -62,7 +64,9 @@ import { ContactComponent } from './web-view/contact/contact.component';
     LoginRegisterComponent,
     ForgotPassComponent,
     AccountComponent,
-    ContactComponent
+    ContactComponent,
+    BlogComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+    .product-detail .nav-pills .nav-link.active,
+    .product-detail .nav-pills .show>.nav-link {
+        background: none !important;
+        color: black !important;
+        border-top: 2px solid tomato !important;
+        display: block;
+    }
+    
+    .btn-addCart {
+        background: tomato !important;
+    }
+    
+    .addToCart .btn-quantity button:hover {
+        background-color: #ffffff !important;
+        color: #6c757d;
+    }
