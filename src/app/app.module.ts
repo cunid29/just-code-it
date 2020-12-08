@@ -34,6 +34,7 @@ import { AccountComponent } from './web-view/account/account.component';
 import { ContactComponent } from './web-view/contact/contact.component';
 import { BlogComponent } from './web-view/blog/blog.component';
 import { OrderComponent } from './web-view/order/order.component';
+import { FAQsComponent } from './web-view/faqs/faqs.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { OrderComponent } from './web-view/order/order.component';
     AccountComponent,
     ContactComponent,
     BlogComponent,
-    OrderComponent
+    OrderComponent,
+    FAQsComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ import { ForgotPassComponent } from './web-view/account/forgot-pass/forgot-pass.
 import { LoginRegisterComponent } from './web-view/account/login-register/login-register.component';
 import { BlogComponent } from './web-view/blog/blog.component';
 import { ContactComponent } from './web-view/contact/contact.component';
+import { FAQsComponent } from './web-view/faqs/faqs.component';
 import { HomeComponent } from './web-view/home/home.component';
 import { Page404Component } from './web-view/page404/page404.component';
 import { ProductAllComponent } from './web-view/product/product-all/product-all.component';
@@ -89,6 +90,10 @@ const routes: Routes = [
       {
         path:'contact',
         component:ContactComponent
+      },
+      {
+        path:'FAQs',
+        component:FAQsComponent
       },
       {
         path:'**',

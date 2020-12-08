@@ -12,6 +12,7 @@ body {
 
 body {
     height: 100%;
+    padding-top: 66px;
 }
 
 .spacing-top {
@@ -22,8 +23,8 @@ body {
     border-bottom: 1px dashed #fff;
 }
 
-.color-tomato {
-    color: tomato;
+.bg-none {
+    background: none !important;
 }
 
 
@@ -32,6 +33,10 @@ body {
 .border-table-none th,
 .border-table-none td {
     border: none;
+}
+
+.page-title h1 {
+    font-size: 50px;
 }
 
 
@@ -133,10 +138,6 @@ body {
 
 /* Product show */
 
-.product-page-title h1 {
-    font-size: 50px;
-}
-
 .product-page-title .category-list li a {
     border-bottom: 1px solid #c7c7c7;
     margin: 0px 10px 0px 10px;
@@ -164,9 +165,6 @@ body {
 /* Desktop */
 
 @media (min-width: 992px) {
-    body {
-        padding-top: 66px;
-    }
     /* Swith-up Price & btn-add-cart*/
     .product .product-price {
         transition: all 0.4s;
