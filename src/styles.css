@@ -164,6 +164,9 @@ body {
 /* Desktop */
 
 @media (min-width: 992px) {
+    body {
+        padding-top: 66px;
+    }
     /* Swith-up Price & btn-add-cart*/
     .product .product-price {
         transition: all 0.4s;

@@ -1,6 +1,6 @@
 <header>
-    <section class="menu-main" id="menu-main" [class.menu-main]="header_main">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4 navbar-scroll" id="navbar-scroll" [class.menu-scroll]="navbar_scroll">
+    <section class="menu-main" id="menu-main">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4 navbar-scroll" id="navbar-scroll">
             <a class="navbar-brand font-weight-bold text-dark" href="#">
                 <img src="https://cdn.iconscout.com/icon/free/png-256/cloth-clothing-wearing-fashion-undergarments-underwear-men-2-9178.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
             </a>
@@ -10,53 +10,53 @@
             <div class="collapse navbar-collapse" id="shopDropdown">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="/">Trang chủ <span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/">Trang chủ <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase font-weight-bold dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link text-uppercase text-dark font-weight-bold dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cửa hàng
                         </a>
                         <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/product">All Product</a>
-                            <a class="dropdown-item" href="/product/product-category">Product Category</a>
-                            <a class="dropdown-item" href="/product/product-category">Product Category</a>
+                            <a class="dropdown-item" routerLink="/product">All Product</a>
+                            <a class="dropdown-item" routerLink="/product/product-category">Product Category</a>
+                            <a class="dropdown-item" routerLink="/product/product-category">Product Category</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="/blog">Blog</a>
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase font-weight-bold" href="/contact">Liên hệ</a>
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/contact">Liên hệ</a>
                     </li>
                 </ul>
             </div>
             <div class="nav-right">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a type="button" data-toggle="modal" data-target="#cartDrop" class="nav-link btn btn-link border-0 text-uppercase font-weight-bold btn-shadow-none"><i class="far fa-shopping-cart header-icon"><span class="badge badge-danger rounded-circle" style="font-size: 10px;">10</span></i></a>
+                        <a type="button" data-toggle="modal" data-target="#cartDrop" class="nav-link btn btn-link border-0 text-uppercase font-weight-bold btn-shadow-none text-dark"><i class="far fa-shopping-cart header-icon"><span class="badge badge-danger rounded-circle" style="font-size: 10px;">10</span></i></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase font-weight-bold" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link text-uppercase font-weight-bold text-dark" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fal fa-user-circle header-icon"></i>
                         </a>
                         <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="language">
-                            <a class="dropdown-item" href="/my-account">Đăng nhập / Đăng ký</a>
-                            <a class="dropdown-item" href="/my-account/forgot-password">Quên mật khẩu</a>
+                            <a class="dropdown-item" routerLink="/my-account">Đăng nhập / Đăng ký</a>
+                            <a class="dropdown-item" routerLink="/my-account/forgot-password">Quên mật khẩu</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/admin">Trang quản lý</a>
+                            <a class="dropdown-item" routerLink="/admin">Trang quản lý</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-uppercase font-weight-bold" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link text-uppercase font-weight-bold text-dark" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fal fa-globe header-icon"></i>
                         </a>
                         <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="language">
-                            <a class="dropdown-item" href="#">English</a>
-                            <a class="dropdown-item" href="#">Vietnamese</a>
+                            <a class="dropdown-item" routerLink="#">English</a>
+                            <a class="dropdown-item" routerLink="#">Vietnamese</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a type="button" class="nav-link btn btn-link border-0 text-uppercase font-weight-bold shadow-none" data-toggle="collapse" href="#SearchBar" role="button" aria-expanded="false" aria-controls="SearchBar"><i class="far fa-search header-icon"></i></a>
+                        <a type="button" class="nav-link btn btn-link border-0 text-uppercase font-weight-bold shadow-none text-dark" data-toggle="collapse" href="#SearchBar" role="button" aria-expanded="false" aria-controls="SearchBar"><i class="far fa-search header-icon"></i></a>
                     </li>
                 </ul>
             </div>

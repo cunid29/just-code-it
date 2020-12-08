@@ -17,13 +17,5 @@ export class DashboardComponent implements OnInit {
         $('#sidebar, #content').toggleClass('active');
       });
     });
-    $(".nav .nav-link").on("click", function(){
-      $(".nav").find(".active").removeClass("active");
-      $(this).addClass("active");
-   });
-    // $('.nav .nav-link').click(function () {
-    //   $('.nav .nav-link').removeClass('active');
-    //   $(this).addClass('active');
-    // });
   }
 }
