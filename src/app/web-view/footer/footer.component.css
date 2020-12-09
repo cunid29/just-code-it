@@ -1,8 +1,11 @@
-.btn-top-page button {
+.back-to-top button {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    border-radius: 50%;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    z-index: 10;
 }
 
 
