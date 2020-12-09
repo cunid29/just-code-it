@@ -210,3 +210,74 @@ body {
         padding-top: 106px;
     }
 }
+
+
+/* Modal Cart */
+
+.cart-view .btn-cart-view {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    background: tomato;
+    border-radius: 100%;
+    vertical-align: middle;
+    top: 150px;
+    right: 5px;
+    z-index: 10;
+    animation-name: btn-cart-view;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes btn-cart-view {
+    0% {
+        top: 150px;
+    }
+    50% {
+        top: 140px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+
+.modal {
+    padding-right: 0px !important;
+}
+
+.modal .modal-dialog-aside {
+    width: 450px;
+    max-width: 80%;
+    height: 100%;
+    margin: 0;
+    transform: translate(0);
+    transition: transform .2s;
+}
+
+.modal .modal-dialog-aside .modal-content {
+    height: inherit;
+    border: 0;
+    border-radius: 0;
+}
+
+.modal .modal-dialog-aside .modal-content .modal-body {
+    overflow-y: auto
+}
+
+.modal.fixed-left .modal-dialog-aside {
+    margin-left: auto;
+    transform: translateX(150%);
+}
+
+.modal.show .modal-dialog-aside {
+    transform: translateX(0);
+}
+
+.cart-view .btn-cart-view i {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+
+/*  */
