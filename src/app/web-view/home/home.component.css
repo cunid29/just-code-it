@@ -1,0 +1,50 @@
+
+
+
+/* .carousel-caption {
+    height: 150px;
+} */
+
+.carousel-caption h1 {
+    font-size: 50px;
+}
+
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+    /* Slide */
+    .slide-main img {
+        height: 70vh;
+    }
+}
+
+
+/* Device horizontal rotation */
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* Slide */
+    .slide-main img {
+        height: 300px;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Slide */
+    .slide-main img {
+        height: 300px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    /* Slide */
+    .slide-main img {
+        height: 150px;
+    }
+}

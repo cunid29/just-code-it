@@ -1,0 +1,19 @@
+<h1>{{product.id == null ? 'Add' : 'Edit'}} Product - {{product.id}}</h1>
+<form>
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name" placeholder="Product Name" [(ngModel)]="product.name" name="name">
+
+  <label for="supplier">Supplier</label>
+  <input type="text" class="form-control" id="supplier" placeholder="supplier" name="supplier" [(ngModel)]="product.supplier">
+
+  <label for="author">Price</label>
+  <input type="text" class="form-control" id="price" placeholder="price" name="price" [(ngModel)]="product.price">
+
+  <div class="form-group" *ngIf="product.id == null">
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+  </div>
+  <br>
+  <button type="button" class="btn btn-success" (click)="saveProduct()">Save Product</button>
+</form>

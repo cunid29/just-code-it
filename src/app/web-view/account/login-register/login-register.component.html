@@ -1,0 +1,80 @@
+<section class="login-register">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <nav class="col-lg-5">
+                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link font-weight-bold active" id="login-tab" data-toggle="pill" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <span class="nav-link">/</span>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link font-weight-bold" id="register-tab" data-toggle="pill" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                            <div class="form-group">
+                                <label for="username" class="text-uppercase h6 font-weight-bold text-secondary input-name">Username *</label>
+                                <input type="text" class="form-control rounded-0 shadow-none" id="username" name="lUsername" [(ngModel)]="form.username" #lUsername="ngModel" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-uppercase h6 font-weight-bold text-secondary input-name">Password *</label>
+                                <input type="password" class="form-control rounded-0 shadow-none" id="lPassword" name="lPassword" [(ngModel)]="form.password" #lPassword="ngModel" />
+                            </div>
+                            <button type="submit" class="btn shadow-none font-weight-bold btn-block rounded-0 btn-submit text-white">Login</button>
+                            <div class="form-row mt-3">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input shadow-none" id="RememberMe">
+                                        <label class="custom-control-label font-weight-bold text-secondary" for="RememberMe">Remember me</label>
+                                    </div>
+                                </div>
+                                <div class="col text-right">
+                                    <a href="/account/forgot-password" class="font-weight-bold text-decoration-none text-tomato">LOST YOUR PASSWORD?</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+                                    Đăng nhập thất bại
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert alert-success" *ngIf="isLoggedIn">
+                            Đăng nhập thành công.
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                            <!-- <div class="form-group">
+                                <label for="name" class="text-uppercase h6 font-weight-bold text-secondary input-name">Name *</label>
+                                <input type="text" class="form-control rounded-0 shadow-none" id="name" name="name" [(ngModel)]="form.name" #name="ngModel">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="username" class="text-uppercase h6 font-weight-bold text-secondary input-name">Username *</label>
+                                <input type="text" class="form-control rounded-0 shadow-none" id="rUsername" name="username" [(ngModel)]="form.username" #rUsername="ngModel">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-uppercase h6 font-weight-bold text-secondary input-name">Email *</label>
+                                <input type="email" class="form-control rounded-0 shadow-none" id="rEmail" name="email" [(ngModel)]="form.email" #rEmail="ngModel">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-uppercase h6 font-weight-bold text-secondary input-name">Password *</label>
+                                <input type="password" class="form-control rounded-0 shadow-none" id="ePassword" name="password" [(ngModel)]="form.password" #rPassword="ngModel">
+                            </div>
+                            <button type="submit" class="btn shadow-none font-weight-bold btn-block rounded-0 btn-submit text-white">Register</button>
+                            <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                                Signup failed!<br />{{ errorMessage }}
+                            </div>
+                        </form>
+                        <div class="alert alert-success" *ngIf="isSuccessful">
+                            Your registration is successful!
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>

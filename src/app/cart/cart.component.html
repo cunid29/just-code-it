@@ -1,0 +1,56 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <section class="product">
+                <div class="product-list">
+                    
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6"  *ngFor="let item of cartProducts;let i=index">
+                            <a href="#" class="card rounded-0 border-0 text-decoration-none">
+                                <img src="{{product.retrievedImage}}" height="184" width="184" class="card-img rounded-0" alt="product">
+                                <div class="card-img-overlay badge-new-sales">
+                                    <h6><span class="badge badge-sales">19%</span></h6>
+                                    <h6><span class="badge badge-new">New</span></h6>
+                                </div>
+                                <div class="card-img-overlay text-white row align-items-end" style="height: 70%;">
+                                    <div class="text-center view-whislist-icon mx-auto">
+                                        <a href="#" class="text-secondary h6 px-2 border-right view-icon"><i class="far fa-eye"></i></a>
+                                        <a href="#" class="text-secondary h6 px-2 whislist-icon"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white text-dark border-0">
+                                    <h6 class="product-name">{{item.name}}</h6>
+                                    <div class="switch-up">
+                                        <div class="product-price">
+                                            <span class="font-weight-bold text-secondary"><del>{{item.supplier}}</del>&nbsp;&nbsp;</span>
+                                            <span class="font-weight-bold text-secondary">${{item.price}}</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div> -->
+
+<div class="modal-content rounded-0 border-0">
+    <div class="modal-body" *ngFor="let item of cartProducts">
+        <div class="item product-cart-item row">
+            <div class="col-md-2" *ngIf="item">{{item.name}}</div>
+            <div class="col-md-2" *ngIf="item"><strong>${{item.price}}</strong></div>
+            <div class="col-md-2" *ngIf="item"><strong>{{item.supplier}}</strong></div>
+        </div>
+    </div>
+    <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="goToCart()">View
+            Cart</button>
+        <div *ngIf="cartProducts.length> 0"><button href="" type="button" class="btn btn-danger"
+                (click)="emptyCart()">Empty Cart</button></div>
+    </div>
+</div>

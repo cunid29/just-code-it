@@ -1,0 +1,88 @@
+<header>
+    <section class="menu-main" id="menu-main">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top px-4 navbar-scroll" id="navbar-scroll">
+            <a class="navbar-brand font-weight-bold text-dark" href="#">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/cloth-clothing-wearing-fashion-undergarments-underwear-men-2-9178.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#shopDropdown" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="shopDropdown">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase text-dark font-weight-bold dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cửa hàng
+                        </a>
+                        <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" routerLink="/product">All Product</a>
+                            <a class="dropdown-item" routerLink="/product/product-category">Product Category</a>
+                            <a class="dropdown-item" routerLink="/product/product-category">Product Category</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/contact">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase text-dark font-weight-bold" routerLink="/FAQs">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a type="button" class="nav-link btn btn-link border-0 text-uppercase font-weight-bold btn-shadow-none text-dark"><i class="far fa-shopping-cart header-icon" routerLink="/cart"><span class="badge badge-danger rounded-circle" style="font-size: 10px;"></span></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase font-weight-bold text-dark" href="#" id="account" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fal fa-user-circle header-icon"></i>
+                        </a>
+                        <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="account" *ngIf="!isLoggedIn">
+                            <a class="dropdown-item" routerLink="/my-account">Đăng nhập / Đăng ký</a>
+                            <a class="dropdown-item" routerLink="/my-account/forgot-password">Quên mật khẩu</a>
+                        </div>
+                        <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="account" *ngIf="isLoggedIn">
+                            <a class="dropdown-item" routerLink="/admin/dashboard">Trang quản lý</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" (click)="logout()">Đăng xuất</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase font-weight-bold text-dark" href="#" id="language" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fal fa-globe header-icon"></i>
+                        </a>
+                        <div class="dropdown-menu border-0 rounded-0 shadow-lg" aria-labelledby="language">
+                            <a class="dropdown-item" href="#">English</a>
+                            <a class="dropdown-item" href="#">Vietnamese</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link btn btn-link border-0 text-uppercase font-weight-bold shadow-none text-dark" data-toggle="collapse" href="#SearchBar" role="button" aria-expanded="false" aria-controls="SearchBar"><i class="far fa-search header-icon"> </i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-bar">
+        <nav class="search-bar collapse border-top border-bottom fixed-top bg-white" id="SearchBar">
+            <div class="p-5">
+                <h6 class="text-secondary font-weight-bold">WHAT ARE YOU LOOKING FOR?</h6>
+                <div class="input-group  border-bottom">
+                    <input type="text" class="form-control bg-white border-0 shadow-none rounded-0" placeholder="Search here" aria-label="Search here" aria-describedby="btn-search-bar">
+                    <div class="input-group-append" id="btn-search-bar">
+                        <button class="btn rounded-0 border-0 btn-close btn-shadow-none bg-white" type="button" data-toggle="collapse" href="#SearchBar" role="button" aria-expanded="false" aria-controls="SearchBar"><i class="fal fa-times text-secondary"></i></button>
+                        <button class="btn btn-outline-secondary btn-search rounded-0 border-0 btn-shadow-none btn-search bg-white" type="button"><i class="far fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!--  -->
+</header>

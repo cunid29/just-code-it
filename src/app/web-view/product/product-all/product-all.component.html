@@ -1,0 +1,166 @@
+<div class="container">
+    <div class="product-page-title">
+        <h1 class="text-center font-weight-bold text-dark">The Shop</h1>
+        <div class="mt-3 mb-5 category-list">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-dark font-weight-bold" href="#">Áo phông</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark font-weight-bold" href="#">Quần Jeans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark font-weight-bold" href="#">Giày</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark font-weight-bold" href="#">Áo khoác</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="cart-view">
+        <button type="button" class="btn btn-link border-0 shadow-none btn-cart-view" data-toggle="modal" data-target="#modal_aside_left">
+            <i class="far fa-shopping-cart"><span class="badge badge-danger rounded-circle" style="font-size: 10px;">{{cartProducts.length}}</span></i>
+        </button>
+        <!-- Show Cart -->
+        <div id="modal_aside_left" class="modal fixed-left fade" tabindex="-1" role="dialog" >
+            <div class="modal-dialog modal-dialog-aside" role="document">
+                <div class="modal-content rounded-0 border-0">
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body px-3">
+                        <!-- Product cart show -->
+                        <div class="container">
+                            <h2 class="">Thông tin giao hàng</h2>
+                            <span>Bạn đã có tài khoản? <a href="/my-account" class="text-decoration-none">Đăng nhập</a></span>
+                            <div class="mt-3">
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="customerName" class="form-control rounded-0"  placeholder="Họ và tên">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-7">
+                                        <input type="text" [(ngModel)]="email" class="form-control rounded-0"  placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <input type="text" [(ngModel)]="phone" class="form-control rounded-0"  placeholder="Số điện thoại">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" [(ngModel)]="address"  class="form-control rounded-0" id="address" placeholder="Địa chỉ">
+                                </div>
+                                <button type="button" (click)="createOrder()" class="btn shadow-none font-weight-bold btn-block rounded-0 bg-tomato text-white py-2">Đặt Hàng ngay!</button>
+                                <div class="modal-footer border-0 row justify-content-start" >
+                                    <button type="button" class="btn btn-primary">Tổng tiền: {{ cartTotal | currency:'USD' }}</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of cartProducts; let i = index">
+                                        <th scope="row">{{i+1}}</th>
+                                        <td><img src="{{item.retrievedImage}}" width="50px" height="50px" alt=""></td>
+                                        <td><h5 class="ml-2">{{item.name}}</h5></td>
+                                        <td class="h6 text-center font-weight-bold">{{item.quantity}}</td>
+                                        <td class="h6 text-tomato font-weight-bold">${{item.price}}</td>
+                                        <td><a class="text-danger shadow-none text-center"><i class="fas fa-trash-alt" (click)="deleteCart(i)"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div *ngIf="cartProducts.length === 0" class="alert alert-info"> Giỏ hàng của bạn đang trống! </div>
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    
+                    
+                    <div class="modal-footer border-0 row justify-content-center px-3">
+                        <button type="button" class="btn btn-info" data-dismiss="modal" (click)="gotoOrders()" >Thanh toán</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="goToCart()">Giỏ hàng</button>
+                        <a routerLink="/product" type="button" class="btn btn-danger" *ngIf="cartProducts.length" (click)="emptyCart()">Làm mới</a>
+                    </div>
+                </div>
+            </div>
+            <!-- modal-dialog .// -->
+        </div>
+        <!-- modal.// -->
+        <!--  -->
+        
+    </section>
+    <div class="row">
+        <div class="col-lg-3">
+            <app-filter-bar></app-filter-bar>
+        </div>
+        <div class="col-lg-9">
+            <section class="product">
+                <div class="product-list">
+                    
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6"  *ngFor="let product of products;let i=index">
+                            <a href="#" class="card rounded-0 border-0 text-decoration-none">
+                                <img src="{{product.retrievedImage}}" height="184" width="184" class="card-img rounded-0" alt="product">
+                                <div class="card-img-overlay badge-new-sales">
+                                    <h6><span class="badge badge-sales">19%</span></h6>
+                                    <h6><span class="badge badge-new">New</span></h6>
+                                </div>
+                                <div class="card-img-overlay text-white row align-items-end" style="height: 70%;">
+                                    <div class="text-center view-whislist-icon mx-auto">
+                                        <a href="#" class="text-secondary h6 px-2 border-right view-icon"><i class="far fa-eye"></i></a>
+                                        <a href="#" class="text-secondary h6 px-2 whislist-icon"><i class="far fa-heart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-white text-dark border-0">
+                                    <h6 class="product-name">{{product.name}}</h6>
+                                    <div class="product-options-color mb-2 bg-white">
+                                        <div class="btn-toolbar">
+                                            <div class="btn-group mr-2" role="group">
+                                                <a href="#" type="button" class="btn btn-dark product-color"></a>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group">
+                                                <a href="#" type="button" class="btn btn-danger product-color"></a>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group">
+                                                <a href="#" type="button" class="btn btn-primary product-color"></a>
+                                            </div>
+                                            <div class="btn-group mr-2" role="group">
+                                                <a href="#" type="button" class="btn btn-warning product-color"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="switch-up">
+                                        <div class="product-price">
+                                            <span class="font-weight-bold text-secondary"><del>${{product.supplier}}</del>&nbsp;&nbsp;</span>
+                                            <span class="font-weight-bold text-secondary">${{product.price}}</span>
+                                        </div>
+                                        <div class="btn-add-cart">
+                                            <a routerLink="/product" class="font-weight-bold text-uppercase h5 text-decoration-none" (click)="addToCart(product.id)" >Thêm sản phẩm</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

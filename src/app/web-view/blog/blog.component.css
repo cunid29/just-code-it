@@ -1,0 +1,10 @@
+.blog-list .btn-read:hover {
+    color: tomato !important;
+}
+
+article {
+    background-image: url('../../../assets/pattern-bg.gif');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

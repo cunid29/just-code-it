@@ -1,0 +1,58 @@
+<article>
+    <div class="navbar-vertical">
+        <div class="vertical-nav bg-white" id="sidebar">
+            <div class="py-4 px-3 mb-4 bg-light text-center">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/cloth-clothing-wearing-fashion-undergarments-underwear-men-2-9178.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+            </div>
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Dashboard</p>
+            <ul class="nav flex-column bg-white mb-0">
+                <li class="nav-item">
+                    <a routerLink="/" class="nav-link text-dark font-weight-bold">
+                        <i class="fas fa-home-lg-alt mr-3 text-primary fa-fw"></i> Trang chủ
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/admin/dashboard" class="nav-link text-dark font-weight-bold" routerLinkActive="active">
+                        <i class="fas fa-analytics mr-3 text-primary fa-fw"></i> Thống kê
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/admin/users" class="nav-link text-dark font-weight-bold" routerLinkActive="active">
+                        <i class="fas fa-user-tie mr-3 text-primary fa-fw"></i> Quản lý người dùng
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/admin/products" class="nav-link text-dark font-weight-bold" routerLinkActive="active">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i> Quản lý sản phẩm
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/admin/orders" class="nav-link text-dark font-weight-bold" routerLinkActive="active">
+                        <i class="fas fa-users mr-3 text-primary fa-fw"></i> Quản lý đơn hàng
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/admin/blog-manager" class="nav-link text-dark font-weight-bold" routerLinkActive="active">
+                        <i class="far fa-newspaper mr-3 text-primary fa-fw"></i> Blog
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark font-weight-bold" (click)="logout()">
+                        <i class="fas fa-sign-out mr-3 text-primary fa-fw"></i> Đăng xuất
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End vertical navbar -->
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle</small></button>
+            <!-- Content -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <script type="text/javascript">
+    </script>
+</article>

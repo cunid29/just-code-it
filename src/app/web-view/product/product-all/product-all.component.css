@@ -1,0 +1,11 @@
+.badge-danger {
+    color: #fff !important;
+    background: none;
+
+}
+.cartProductsLength {
+    font-size: 15px;
+    position: absolute;
+    top: 50px;
+    right: 22px;
+}

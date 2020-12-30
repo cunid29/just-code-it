@@ -1,0 +1,72 @@
+<section class="content-dashboard">
+    <div class="text-center mb-5">
+        <h2 class="font-weight-bold">Customer Manager</h2>
+        <p>Quản lý Customer</p>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr class="text-center">
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#user01">
+                        View
+                      </button>|
+                    <a href="#" type="button" class="btn btn-link">Edit</a>|
+                    <a href="#" type="button" class="btn btn-link">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td class="text-center">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#user01">
+                        View
+                      </button>|
+                    <a href="#" type="button" class="btn btn-link">Edit</a>|
+                    <a href="#" type="button" class="btn btn-link">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="user01" tabindex="-1" aria-labelledby="user01Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title font-weight-bold" id="user01Label">Thông tin User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body px-4 py-2">
+                    <p><b>Họ và tên:</b> Tên</p>
+                    <p><b>Username:</b> admin</p>
+                    <p><b>Password:</b> 123123123</p>
+                    <p><b>Ngày sinh:</b> 01/11/2020</p>
+                    <p><b>Giới tính:</b> Nam</p>
+                    <p><b>Điện thoại:</b> 0129301293</p>
+                    <p><b>Địa chỉ:</b> Đà Nẵng</p>
+                    <p><b>Trạng thái:</b> Đang hoạt động</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
